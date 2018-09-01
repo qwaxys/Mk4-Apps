@@ -25,17 +25,17 @@ WHITE       = ugfx.WHITE
 GRAY        = ugfx.GRAY
 BLACK       = ugfx.BLACK
 RED         = ugfx.RED
-LIGHTRED    = ugfx.LIGHTRED
+LIGHTRED    = ugfx.RED
 GREEN       = ugfx.GREEN
-LIGHTGREEN  = ugfx.LIGHTGREEN
+LIGHTGREEN  = ugfx.GREEN
 BLUE        = ugfx.BLUE
-LIGHTBLUE   = ugfx.LIGHTBLUE
+LIGHTBLUE   = ugfx.BLUE
 YELLOW      = ugfx.YELLOW
-LIGHTYELLOW = ugfx.LIGHTYELLOW
+LIGHTYELLOW = ugfx.YELLOW
 ORANGE      = ugfx.ORANGE
-LIGHTORANGE = ugfx.LIGHTORANGE
+LIGHTORANGE = ugfx.ORANGE
 PURPLE      = ugfx.PURPLE
-LIGHTPURPLE = ugfx.LIGHTPURPLE
+LIGHTPURPLE = ugfx.PURPLE
 
 COLORS      = (     BLUE,      GREEN,      RED,      YELLOW,      ORANGE,      PURPLE)
 LIGHTCOLORS = (LIGHTBLUE, LIGHTGREEN, LIGHTRED, LIGHTYELLOW, LIGHTORANGE, LIGHTPURPLE)
@@ -252,9 +252,9 @@ class Controller(object):
         for j in range(BOARD_HEIGHT):
             ugfx.line(0 , j * BOX_SIZE, WINDOW_WIDTH, j * BOX_SIZE, GRAY)
 
-    def textObjects(self, text, font):
-        textSurface = font.render(text, True, GRAY)
-        return textSurface, textSurface.get_rect()
+#    def textObjects(self, text, font):
+#        textSurface = font.render(text, True, GRAY)
+#        return textSurface, textSurface.get_rect()
 
 #    def displayScore(self):
 #        font = pygame.font.Font('freesansbold.ttf', 30)
@@ -276,14 +276,14 @@ class Controller(object):
  #       pygame.display.update()
 
     def input(self):
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT: self.m_gameOver = True
+ #       for event in pygame.event.get():
+ #           if event.type == pygame.QUIT: self.m_gameOver = True
 
-            if Buttons.is_pressed(Buttons.JOY_Left):     self.m_direction['left'] = True
-            elif Buttons.is_pressed(Buttons.JOY_Right):  self.m_direction['right'] = True
-            elif Buttons.is_pressed(Buttons.JOY_Down):   self.m_direction['down'] = True
-            elif Buttons.is_pressed(Buttons.JOY_Up):  self.m_rotate = True
-            elif Buttons.is_pressed(Buttons.BTN_Menu): self.m_gameOver = True
+         if Buttons.is_pressed(Buttons.JOY_Left):     self.m_direction['left'] = True
+         elif Buttons.is_pressed(Buttons.JOY_Right):  self.m_direction['right'] = True
+         elif Buttons.is_pressed(Buttons.JOY_Down):   self.m_direction['down'] = True
+         elif Buttons.is_pressed(Buttons.JOY_Up):  self.m_rotate = True
+         elif Buttons.is_pressed(Buttons.BTN_Menu): self.m_gameOver = True
 
 #            elif event.type == pygame.KEYUP:
 #                if event.key == pygame.K_LEFT:     self.m_direction['left'] = False
