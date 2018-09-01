@@ -12,4 +12,4 @@ import ugfx, os, time, sleep, app
 ugfx.init()
 ugfx.clear()
 
-ugfx.text(5, 5, "Hello World!", ugfx.BLACK)
+ugfx.text(5, 5, "Hello World!!!!!!!!!!!", ugfx.BLACK)
