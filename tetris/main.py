@@ -14,7 +14,7 @@ ugfx.clear()
 ########################################
 
 ugfx.clear()
-while true:
+while True:
             if Buttons.is_pressed(Buttons.JOY_Left):     ugfx.text(5, 5, "Left", ugfx.RED)
             elif Buttons.is_pressed(Buttons.JOY_Right):  ugfx.text(5, 5, "Right", ugfx.RED)
             elif Buttons.is_pressed(Buttons.JOY_Down):   ugfx.text(5, 5, "Down", ugfx.RED)
